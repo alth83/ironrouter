@@ -1,0 +1,25 @@
+<template name="shops">
+    <div class="page-header">
+        <h1>Shops</h1>
+    </div>
+    <div>
+      <ul>
+      {{#each shopinlist}}
+        {{> shop}}
+      {{/each}}
+    </ul>
+    </div>
+</template>
+
+<template name="shop">
+  <li>
+    <div class="thumbnail">
+      <img src="source" alt="alt">
+      <div class="caption">
+        <h3>{{shopname}}</h3>
+        <p>{{shopdescription}}</p>
+        <p><a href="#" class="btn btn-primary" role="button">Menu</a> <a href="#" class="btn btn-default" role="button">Add to favourites</a></p>
+      </div>
+    </div>
+  </li>
+</template>

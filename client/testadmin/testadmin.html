@@ -1,0 +1,53 @@
+<template name="testadmin">
+    <div class="container admin-container">
+        <br>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <button type="button" class="btn btn-default clear-orders btn-danger">Clear Orders database
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>        
+        <br>
+        <div>
+            Orders pending confirmation:
+            
+            {{#each orderpending}}
+                {{>orderadmin}}
+            {{/each}}
+            
+            
+        </div>
+        
+        <div>
+            Accepted orders:
+            
+            {{#each orderaccepted}}
+                {{>orderadmin}}
+            {{/each}}
+        </div>
+        
+        <div>
+            Orders waiting collection:
+            
+            {{#each orderforcollection}}
+                {{>orderadmin}}
+            {{/each}}
+        </div>
+    </div>
+</template>
+
+<template name="orderadmin">
+        <div class="list-group">
+            <a href="#" class="list-group-item clearfix">
+            <span class="glyphicon glyphicon-file"></span>
+              Order time: {{orderedAt}}
+            <span class="pull-right">
+              <button class="acknowledgeorder btn btn-xs btn-info">Accept</button>
+              <button class="btn btn-xs btn-warning">Reject</button>
+            </span>
+            </a>
+        </div>
+</template>

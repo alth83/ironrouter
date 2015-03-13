@@ -1,0 +1,26 @@
+<template name="promotions">
+    <div class="page-header">
+        <h1>Promotions</h1>
+    </div>
+    <div>
+      <ul>
+      {{#each promoinlist}}
+        {{> promo}}
+      {{/each}}
+      </ul>
+    </div>
+</template>
+
+<template name="promo">
+  <li>
+    <div class="thumbnail">
+      <img src="/promotions/images/{{promoimage}}">
+      <div class="caption">
+        <img class="shoplogo" src="/shops/{{promologo}}">
+        <h3>{{promoname}}</h3>
+        <p>{{promotext}}</p>
+        <p><a href="#" class="btn btn-primary" role="button">Menu</a></p>
+      </div>
+    </div>
+  </li>
+</template>

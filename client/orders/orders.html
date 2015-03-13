@@ -1,0 +1,76 @@
+<template name="orders">
+    <div class="page-header">
+        <h1>Orders</h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <!--<span>Collection time in: </span>
+                <button class="btn btn-default dropdown-toggle" type="button" id="collectionTimeMenu" data-toggle="dropdown" aria-expanded="true">time
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="collectionTimeMenu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 mins</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10 mins</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">15 mins</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">20 mins</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">25 mins</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">30 mins</a></li>
+                </ul>-->
+                <button type="button" class="btn btn-default placeorder">Order
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <span class="pull-right">Time Now: {{time}}</span>
+        </div>
+    </div>
+    
+    <div>
+        Pending Orders:
+        <ul>
+            {{#each orderpending}}
+                {{>order1}}
+            {{/each}}
+        </ul>
+    </div>
+    
+    <div>
+        Confirmed Orders:
+        <ul>
+            {{#each orderconfirmed}}
+                {{>order2}}
+            {{/each}}
+        </ul>
+    </div>
+    
+    <div>
+        Completed Orders:
+        <ul>
+            {{#each ordercompleted}}
+                {{>order3}}
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<template name="order1">
+    <li>
+        <span>
+            order placed at {{orderedAt}}
+        </span>
+        <span>
+            waiting to be collected at
+        </span>
+    </li>
+</template>
+
+<template name="order2">
+    <li>
+        <span>
+            order {{_id}} accepted. time left till ready:
+        </span>
+    </li>
+</template>

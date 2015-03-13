@@ -1,0 +1,49 @@
+<template name="signupForm">
+  <div class="container login-container">
+    <div class="login-wraper">
+    <form id="signup-form" class="form signup-form">
+        <legend>Sign up to <span class="blue">70 Minutes</span></legend>
+        
+        <div>
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" />
+        
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" />
+        
+        <label for="signup-name">Full Name</label>
+        <input type="text" id="signup-name" />
+        </div>
+        
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+    </div>
+  </div>
+</template>
+
+<template name="loginForm">
+  <div class="container login-container">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+        <form id="login-form" class="form center-block" role="form">
+          <br><br><br>
+          <h2 class="">Welcome!</h2>
+          
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="form-group">
+            <div class="">
+                <input type="text" id="login-username" class="form-control" placeholder="Username" name="username"/>
+            </div>
+            <div class="">
+                <input type="password" id="login-password" class="form-control" placeholder="Password" name="password"/>
+            </div>
+          </div>
+      
+          <div class="form-group form-group-submit">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Log In</button>
+          </div>
+        </form>
+        <br>
+        <button class="btn btn-info" id="signupBtn">new user? sign up here!</button>
+    </div>
+  </div>
+</template>
